@@ -12,8 +12,6 @@ let y = 10;
 ```
 a) A saída será undefined seguido de erro 
 
-b) A saída será 5 seguido de 10
+Justificativa: O var x foi definido apos ser chamado e isso causou o retorno undefined, enquanto o y so foi criado apos ser chamado gerando um outro erro.
 
-c) A saída será undefined seguido de undefined
 
-d) A saída será erro em ambas as linhas que utilizam console.log
