@@ -27,7 +27,7 @@ function soma(a, b) {
 console.log(soma(2, 0));
 ```
 
-a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
+b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 
 Justificativa: Não podemos utilizar a logica do if em que duas constantes estão se igualando a um valor, devemos classificar cada constante um valor expecifico mesmo que seja o mesmo valor para as duas.
 
@@ -68,7 +68,7 @@ let resultado = numeros.map(x => x * 2).filter(x => x > 5).reduce((a, b) => a + 
 
 console.log(resultado);
 ```
-c) 18
+d) 24
 
 Justificativa: O map multiplica todos por 2: [2, 4, 6, 8, 10]. O filter mantém [6, 8, 10]. O reduce soma: 6 + 8 + 10 = 18.
 ______
