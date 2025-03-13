@@ -70,7 +70,7 @@ console.log(resultado);
 ```
 d) 24
 
-Justificativa: O map multiplica todos por 2: [2, 4, 6, 8, 10]. O filter mantém [6, 8, 10]. O reduce soma: 6 + 8 + 10 = 18.
+Justificativa: O map dobra os valores [2, 4, 6, 8, 10], o filter mantém [6, 8, 10] e o reduce soma 6 + 8 + 10 = 24.
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -80,13 +80,9 @@ lista.splice(1, 2, "abacaxi", "manga");
 console.log(lista);
 ```
 
-a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
-
-b) ["banana", "abacaxi", "manga"]
-
 c) ["banana", "abacaxi", "manga", "laranja"]
 
-d) ["banana", "maçã", "uva", "abacaxi", "manga"]
+Justificativa: O splice(1, 2, "abacaxi", "manga") remove "maçã" e "uva" e insere "abacaxi" e "manga" na posição 1.
 ______
 **6) Abaixo há duas afirmações sobre herança em JavaScript. Indique a alternativa correta e justifique sua resposta**
 
@@ -96,11 +92,8 @@ II. Em JavaScript, a herança é implementada através da palavra-chave `extends
 
 a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
 
-b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
+Justificativa: A herança permite reuso de código e é implementada em JavaScript com extends.
 
-c) A primeira afirmação é verdadeira, e a segunda é falsa.
-
-d) A primeira afirmação é falsa, e a segunda é verdadeira.
 ______
 **7) Dado o seguinte código. Indique a alternativa correta e justifique sua resposta.**
 
@@ -138,11 +131,7 @@ Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
 a) I e II são verdadeiras.
 
-b) I, II e III são verdadeiras.
-
-c) Apenas II é verdadeira.
-
-d) Apenas I é verdadeira.
+Justificativa: A classe Funcionario herda de Pessoa e pode acessar nome e idade. O método apresentar() de Funcionario chama o da classe pai com super.
 
 ______
 
@@ -151,13 +140,9 @@ ______
 **Asserção:** O conceito de polimorfismo em Programação Orientada a Objetos permite que objetos de diferentes tipos respondam à mesma mensagem de maneiras diferentes.  
 **Razão:** Em JavaScript, o polimorfismo pode ser implementado utilizando o método de sobrecarga de métodos em uma classe.
 
-a) A asserção é falsa e a razão é verdadeira.
-
 b) A asserção é verdadeira e a razão é falsa.
 
-c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
-
-d) A asserção é verdadeira e a razão é verdadeira, e a razão explica a asserção.
+Justificativa: O polimorfismo permite diferentes respostas a uma mesma chamada, mas JavaScript não suporta sobrecarga de métodos como em Java.
 
 ______
 
@@ -174,11 +159,59 @@ function somaArray(numeros) {
 }
 console.log(somaArray([1, 2, 3, 4]));
 ```
+**Correção:
+```javascript
+function somaArray(numeros) {
+    let soma = 0; // Inicializa a variável soma
+    for (let i = 0; i < numeros.length; i++) { // Corrige .size para .length
+        soma += 2 * numeros[i]; // Soma corretamente o dobro de cada número
+    }
+    return soma;
+}
+console.log(somaArray([1, 2, 3, 4])); // Saída esperada: 20
+```
+size não existe, o correto é length.
+soma precisa ser inicializada.
+Atribuição soma = 2 * numeros[i] sobrescrevia valores anteriores, corrigimos para soma +=.
+
 ______
 10) Crie um exemplo prático no qual você tenha duas classes:
 
 - Uma classe `Produto` com atributos `nome` e `preco`, e um método `calcularDesconto()` que aplica um desconto fixo de 10% no preço do produto.
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
+
+```javascript
+class Produto {
+    constructor(nome, preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    calcularDesconto() {
+        return this.preco * 0.9; // 10% de desconto
+    }
+}
+
+class Livro extends Produto {
+    calcularDesconto() {
+        return this.preco * 0.8; // 20% de desconto
+    }
+}
+
+let produto = new Produto("Celular", 1000);
+console.log(produto.calcularDesconto()); // 900
+
+let livro = new Livro("JavaScript Avançado", 100);
+console.log(livro.calcularDesconto()); // 80
+```
+
+Explicação:
+
+Livro herda de Produto, reutilizando nome e preco.
+
+O método calcularDesconto() de Livro sobrescreve o da classe pai, aplicando 20% de desconto.
+
+Isso demonstra polimorfismo: objetos diferentes (Produto e Livro) respondem de formas distintas ao mesmo método calcularDesconto().
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
 
