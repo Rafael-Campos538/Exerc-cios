@@ -170,7 +170,7 @@ function somaArray(numeros) {
 }
 console.log(somaArray([1, 2, 3, 4])); // Saída esperada: 20
 ```
-size não existe, o correto é length.
+O comando size não existe, o correto é length.
 soma precisa ser inicializada.
 Atribuição soma = 2 * numeros[i] sobrescrevia valores anteriores, corrigimos para soma +=.
 
