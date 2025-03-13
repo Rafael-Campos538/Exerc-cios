@@ -142,7 +142,7 @@ ______
 
 b) A asserção é verdadeira e a razão é falsa.
 
-Justificativa: O polimorfismo permite diferentes respostas a uma mesma chamada, mas JavaScript não suporta sobrecarga de métodos como em Java.
+Justificativa: O polimorfismo permite diferentes respostas a uma mesma chamada, mas JavaScript não consegue suportar sobrecarga de métodos como em Java.
 
 ______
 
