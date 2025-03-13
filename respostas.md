@@ -56,14 +56,9 @@ function calcularPreco(tipo) {
 console.log(calcularPreco("eletrônico"));
 ```
 
-a) O código imprime 1000.
-
 b) O código imprime 200.
 
-c) O código imprime 50.
-
-d) O código gera um erro.
-
+Justificativa: Como não há break após case "eletrônico", o código segue para o próximo case e sobrescreve preco para 200.
 ______
 **4) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
 ```javascript
@@ -73,13 +68,9 @@ let resultado = numeros.map(x => x * 2).filter(x => x > 5).reduce((a, b) => a + 
 
 console.log(resultado);
 ```
-a) 0
-
-b) 6
-
 c) 18
 
-d) 24
+Justificativa: O map multiplica todos por 2: [2, 4, 6, 8, 10]. O filter mantém [6, 8, 10]. O reduce soma: 6 + 8 + 10 = 18.
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
