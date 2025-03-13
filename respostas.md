@@ -14,6 +14,7 @@ a) A saída será undefined seguido de erro
 
 Justificativa: O var x foi definido apos ser chamado e isso causou o retorno undefined, enquanto o y so foi criado apos ser chamado gerando um outro erro.
 
+______
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
 
 ```javascript
