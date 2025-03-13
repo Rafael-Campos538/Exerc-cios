@@ -1,9 +1,6 @@
 # Respostas
 
-- Resolva as questões com uso do Visual Studio Code ou ambiente similar.
-- Teste seus códigos antes de trazer a resposta para cá.
-- Cuidado com o uso de ChatGPT (e similares), pois entregar algo só para ganhar nota não fará você aprender. Não seja dependente da máquina!
-- Ao final, publique seu arquivo lista_01.md com as respostas em seu repositório, e envie o link pela Adalove. 
+
 
 # Questões objetivas
 **1) Considerando a execução do código abaixo, indique a alternativa correta e justifique sua resposta.**
