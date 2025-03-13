@@ -198,8 +198,8 @@ class Livro extends Produto {
     }
 }
 
-let produto = new Produto("Celular", 1000);
-console.log(produto.calcularDesconto()); // 900
+let produto = new Produto("Celular", 100);
+console.log(produto.calcularDesconto()); // 90
 
 let livro = new Livro("JavaScript Avançado", 100);
 console.log(livro.calcularDesconto()); // 80
@@ -208,10 +208,7 @@ console.log(livro.calcularDesconto()); // 80
 Explicação:
 
 Livro herda de Produto, reutilizando nome e preco.
-
-O método calcularDesconto() de Livro sobrescreve o da classe pai, aplicando 20% de desconto.
-
+O método calcularDesconto() de Livro sobrescreve o da classe produto, aplicando 20% de desconto.
 Isso demonstra polimorfismo: objetos diferentes (Produto e Livro) respondem de formas distintas ao mesmo método calcularDesconto().
 
-Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
 
